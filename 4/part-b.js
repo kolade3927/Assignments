@@ -19,9 +19,9 @@ document.getElementById("guess-button").onclick = function(e){
 			}else{
 				document.getElementById("result").innerHTML = "The secret number is lower. Try again!";
 			}
+			guessesLeft--;
+			document.getElementById("guessesleft").innerHTML = guessesLeft + "guesses Left.";
 		}
-		guessesLeft--;
-		document.getElementById("guessesleft").innerHTML = guessesLeft + "guesses Left.";
 	}else{
 		guessesLeft = 5;
 		secretNumber = Math.floor((Math.random() * 100) + 1);
